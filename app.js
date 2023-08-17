@@ -11,6 +11,9 @@ const app = Vue.createApp({
     methods:{
         changePublisher(){
             this.publisher = 'penguin'
+        },
+        changeTitle(){
+            this.title = 'Nemesis of the dark'
         }
     }
 })

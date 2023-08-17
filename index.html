@@ -12,7 +12,7 @@
       <p>{{title}} - {{author}} - {{age}} - {{publisher}}</p>
       <button v-on:click="age++">Increase age</button>
       <button v-on:click="age--">Decrease age</button>
-      <button @click="title = 'something else'">change book title</button>
+      <button @click=changeTitle()>change book title</button>
       <button @click=changePublisher()> update publisher</button>
     </div>
     <script src="app.js"></script>

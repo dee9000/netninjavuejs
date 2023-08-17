@@ -14,6 +14,9 @@ const app = Vue.createApp({
         },
         changeTitle(){
             this.title = 'Nemesis of the dark'
+        },
+        changeAuthor(){
+            this.author = "Thomas Kale"
         }
     }
 })

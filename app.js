@@ -84,12 +84,21 @@ const app4 = Vue.createApp({
             title: '--',
             year:1978,
             genre: 'Adventure',
-            actor: 'Christopher reeves'
-              }
+            actor: 'Christopher reeves',
+            x:0,
+            y:0
+        }
     },
     methods:{
-        handleEvent(){
-            console.log('event')
+        handleEvent(e, data){
+            console.log(e, e.type)
+            if(data){
+                console.log(data)
+            }
+        },
+        handleMousemove(e){
+          this.x = e.offsetX
+          this.y = e.offsetY
         },
         toggleItem(){
             this.showStuff = !this.showStuff

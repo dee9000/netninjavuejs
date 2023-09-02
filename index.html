@@ -99,12 +99,27 @@
                             <p>{{movie.year}}</p>
                         </li>
                     </ul>
-
                 </div>
-
             </div>
+        </div>
+
+       <!--seventh project-->
+       <div class="section">
+        <h1>Data/Attribute binding</h1>
+        <div id="app7">
+            <a v-bind:href="url">Movies Website</a>
+            <ul>
+                <li v-for="movie in movies">
+                    <img :src="movie.img" :alt="movie.title">
+                    <h3>{{movie.title}}</h3>
+                    <p>{{movie.year}}</p>
+
+                </li>
+            </ul>
 
         </div>
+       </div>
+
 
 
     

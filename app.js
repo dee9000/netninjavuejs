@@ -131,8 +131,6 @@ const app5 = Vue.createApp({
 app5.mount('#app5')
 
 //sixth project
-
-
 const app6 = Vue.createApp({
     data(){
         return{
@@ -146,3 +144,20 @@ const app6 = Vue.createApp({
     }
 })
 app6.mount('#app6')
+
+
+//seventh project
+const app7 = Vue.createApp({
+    data(){
+        return{
+            url:"https://www.imdb.com/",
+            movies:[
+                {title:'the goonies', year: 1985, img:'assets/1.jpg' },
+                {title:'superman', year: 1978, img:'assets/2.jpg'},
+                {title:'batman', year: 1989, img:'assets/3.jpg'},
+                {title:'conan', year: 1981, img:'assets/4.jpg'}
+            ]
+        }
+    }
+})
+app7.mount('#app7')

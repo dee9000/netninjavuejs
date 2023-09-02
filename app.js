@@ -129,3 +129,20 @@ const app5 = Vue.createApp({
     }
 })
 app5.mount('#app5')
+
+//sixth project
+
+
+const app6 = Vue.createApp({
+    data(){
+        return{
+            movies:[
+                {title:'the goonies', year: 1985},
+                {title:'superman', year: 1978},
+                {title:'batman', year: 1989},
+                {title:'conan', year: 1981}
+            ]
+        }
+    }
+})
+app6.mount('#app6')

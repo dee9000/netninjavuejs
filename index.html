@@ -69,6 +69,26 @@
             </div>
         </div>
 
+    <!--fifth project-->
+    <div class="section">
+        <h1>V-for</h1>
+            <div id="app5">
+                <div v-if="showBooks">
+                    <ul>
+                        <li v-for="book in books">
+                          <h3>{{book.title}}</h3>
+                          <p>{{book.author}}</p>
+                        </li>
+                    </ul>
+                </div>
+                
+                <button v-on:click="toggleBooks">
+                    <span v-if="showBooks">Hide</span>
+                    <span v-else>Show</span>
+                </button></br>
+            </div>
+    </div>
+
     
 
 

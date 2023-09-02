@@ -76,7 +76,7 @@ const app3 = Vue.createApp({
 app3.mount('#app3')
 
 
-
+//fourth project
 const app4 = Vue.createApp({
     data(){
         return{
@@ -108,3 +108,24 @@ const app4 = Vue.createApp({
 })
 
 app4.mount('#app4')
+
+//fifth project
+const app5 = Vue.createApp({
+    data(){
+        return{
+            showBooks:true,
+            books: [
+                {title: 'name of the wind', author: 'patrick rothfuss'},
+                {title: 'the way of kinds', author: 'brandon sanderson'},
+                {title: 'the final empire', author: 'brandon sanderson'},
+            ]
+        }
+    },
+    methods:{
+        toggleBooks(){
+            this.showBooks = !this.showBooks
+        }
+
+    }
+})
+app5.mount('#app5')

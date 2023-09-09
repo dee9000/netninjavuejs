@@ -150,6 +150,7 @@ app6.mount('#app6')
 const app7 = Vue.createApp({
     data(){
         return{
+            showMovies:true,
             url:"https://www.imdb.com/",
             movies:[
                 {title:'the goonies', year: 1985, img:'assets/1.jpg' },
@@ -157,6 +158,11 @@ const app7 = Vue.createApp({
                 {title:'batman', year: 1989, img:'assets/3.jpg'},
                 {title:'conan', year: 1981, img:'assets/4.jpg'}
             ]
+        }
+    },
+    methods:{
+        toggleMovies(){
+          this.showMovies = !this.showMovies
         }
     }
 })

@@ -107,6 +107,7 @@
        <div class="section">
         <h1>Data/Attribute binding</h1>
         <div id="app7">
+            <div v-if="showMovies">
             <a v-bind:href="url">Movies Website</a>
             <ul>
                 <li v-for="movie in movies">
@@ -116,6 +117,11 @@
 
                 </li>
             </ul>
+            </div>
+            <button @click="toggleMovies">
+                <span v-if="showMovies">hide</span>
+                <span v-else>show</span>
+            </button>
 
         </div>
        </div>

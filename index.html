@@ -4,19 +4,138 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="#">
     <script src="https://unpkg.com/vue@3.0.2"></script>
 </head>
 <body>
+    <!--first project-->
+<div class="section">
     <h1>Vue Training</h1>
-    <div id="app">
-      <p>{{title}} - {{author}} - {{age}} - {{publisher}}</p>
-      <button v-on:click="age++">Increase age</button>
-      <button v-on:click="age--">Decrease age</button>
-      <button @click=changeTitle()>change book title</button>
-      <button @click=changePublisher()> update publisher</button>
-      <button @click=changeAuthor()>update author</button>
+        <div id="app">
+            <p>{{title}} - {{author}} - {{age}} - {{publisher}}</p>
+            <button v-on:click="age++">Increase age</button></br>
+            <button v-on:click="age--">Decrease age</button></br>
+            <button @click=changeTitle('oathbringer')>change book title</button></br>
+            <button @click=changePublisher('saturn')> update publisher</button></br>
+            <button @click=changeAuthor('Henry-Anderson')>update author</button>
+        </div>
+</div>
+    <!--second project-->
+<div class="section">
+    <h1>Great Movies</h1>
+        <div id="app2">
+            <h3>{{title}}-{{year}}-{{genre}}-{{actor}}</h3>
+            <button @click=changeTitle('goonies')>change title</button>
+            <button @click=changeActor('sean-austin')>change actor</button>            
+        </div>
+</div>
+
+    <!--third project-->
+<div class="section">
+    <h1>Conditionals V-if</h1>
+        <div id="app3">
+          <div v-if="showStuff">
+            <h3>{{title}}-{{year}}-{{genre}}-{{actor}}</h3>
+            <!--<button v-on:click=changeTitle('superman')>change title</button>-->
+          </div>
+          <!--place outside of the event so not to hide the button-->
+          <!--but place within application itself-->   
+           <button @click="toggleButton">
+            <span v-if="showStuff">hide event</span>
+            <span v-else>show event</span>
+           </button> 
+           <!--does the same by hiding with css-->
+           <div v-show="showStuff">showing stuff</div>
+        </div>
+</div>
+
+
+    <!--fourth project-->
+        <div class="section">
+            <div id="app4">
+                    <h3>{{title}}-{{year}}-{{genre}}-{{actor}}</h3>           
+                <button @click="toggleItem">
+                    <span v-if="showStuff">Hide</span>
+                    <span v-else>Show</span>
+                </button>
+
+                <br>
+                <!--mouse events-->
+                <div class="box" v-on:mouseover="handleEvent($event, 5)">mouseover (enter)</div>
+                <div class="box" @mouseleave="handleEvent">mouseleave</div>
+                <div class="box" @dblclick="handleEvent">double click</div>
+                <div class="box" @mousemove="handleMousemove">position - {{ x }} - {{ y }}</div>
+            </div>
+        </div>
+
+    <!--fifth project-->
+    <div class="section">
+        <h1>V-for</h1>
+            <div id="app5">
+                <div v-if="showBooks">
+                    <ul>
+                        <li v-for="book in books">
+                          <h3>{{book.title}}</h3>
+                          <p>{{book.author}}</p>
+                        </li>
+                    </ul>
+                </div>
+                
+                <button v-on:click="toggleBooks">
+                    <span v-if="showBooks">Hide</span>
+                    <span v-else>Show</span>
+                </button></br>
+            </div>
     </div>
-    <script src="app.js"></script>
+        <!--sixth project-->
+        <div class="section">
+            <h1>More V-for lists</h1>
+            <div id="app6">
+                <div>
+                    <ul>
+                        <li v-for="movie in movies">
+                            <h3>{{movie.title}}</h3>
+                            <p>{{movie.year}}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+       <!--seventh project-->
+       <div class="section">
+        <h1>Data/Attribute binding</h1>
+        <div id="app7">
+            <a v-bind:href="url">Movies Website</a>
+            <ul>
+                <li v-for="movie in movies">
+                    <img :src="movie.img" :alt="movie.title">
+                    <h3>{{movie.title}}</h3>
+                    <p>{{movie.year}}</p>
+
+                </li>
+            </ul>
+
+        </div>
+       </div>
+
+
+
     
+
+
+
+
+
+   
+
+
+
+
+
+
+
+<script src="app.js"></script>  
 </body>
 </html>

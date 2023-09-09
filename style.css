@@ -1,0 +1,17 @@
+.section{
+    width: 80%;
+    height: auto;
+    margin:4em auto;
+    padding:1.5em;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+.box{
+    padding:100px 0;
+    width: 400px;
+    text-align: center;
+    background-color: #ddd;
+    margin:20px;
+    display: inline-block;
+}

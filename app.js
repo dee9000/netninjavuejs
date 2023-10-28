@@ -150,6 +150,7 @@ app6.mount('#app6')
 const app7 = Vue.createApp({
     data(){
         return{
+            subheading:'using v-bind: to access properties within data area',
             showMovies:true,
             url:"https://www.imdb.com/",
             movies:[
